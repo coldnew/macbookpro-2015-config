@@ -1,7 +1,9 @@
 [Unit]
-Description=Mount Local Initial Service
+Description=My Local Initial Service
 
 [Service]
+Type=oneshot
+RemainAfterExit=no
 ExecStart=/usr/share/macbookair-2013/bin/local-service --start
 ExecStart=/usr/share/macbookair-2013/bin/local-service --stop
 
