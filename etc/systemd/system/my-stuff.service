@@ -4,8 +4,8 @@ Description=My Local Initial Service
 [Service]
 Type=oneshot
 RemainAfterExit=no
-ExecStart=/usr/share/macbookair-2013/local-service --start
-ExecStart=/usr/share/macbookair-2013/local-service --stop
+ExecStart=/usr/share/macbookair-2013/local-service start
+ExecStart=/usr/share/macbookair-2013/local-service stop
 
 [Install]
 WantedBy=multi-user.target
