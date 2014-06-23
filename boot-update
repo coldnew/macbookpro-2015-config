@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# update grub for dual boot osx
+
+# TODO: Add more secure check
+
+grub2-mkstandalone \
+    -d /usr/lib/grub/x86_64-efi \
+    -O x86_64-efi \
+    -o /boot/efi/System/Library/CoreServices/boot.efi /boot/grub/grub.cfg

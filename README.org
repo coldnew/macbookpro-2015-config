@@ -19,7 +19,15 @@ Fell free to use it :)
   This file will install to =/usr/share/macbookair-2013/= , which is
   used for =my-stuff.service= systemd script.
 
-- kernel-config
+- kernel-config.example
 
   My kernel-config for Macbook Air 2013, note that this config just
   install to =/usr/share/macbookair-2013/=.
+
+- fstab.example
+
+  My /etc/fstab
+
+- boot-update
+
+  A simple update grub script for dual boot on Macbook Air
