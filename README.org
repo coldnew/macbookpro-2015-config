@@ -5,3 +5,16 @@
 This my config files or scripts for Gentoo Linux on Macbook Air 2013.
 
 Fell free to use it :)
+
+* Systemd Script
+
+- my-stuff.service
+
+  This service start something I want to start when system start.
+
+* Other files info
+
+- local-service
+
+  This file will install to =/usr/share/macbookair-2013/= , which is
+  used for =my-stuff.service= systemd script.

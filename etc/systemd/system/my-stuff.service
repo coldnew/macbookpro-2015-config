@@ -1,0 +1,9 @@
+[Unit]
+Description=Mount Local Initial Service
+
+[Service]
+ExecStart=/usr/share/macbookair-2013/bin/local-service --start
+ExecStart=/usr/share/macbookair-2013/bin/local-service --stop
+
+[Install]
+WantedBy=multi-user.target
