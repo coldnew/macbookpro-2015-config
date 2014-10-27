@@ -4,17 +4,6 @@ start() {
     # Fix osx keyboard layout, if this not set, the key pair "`~" will
     # becomes "<>"
     echo 0 > /sys/module/hid_apple/parameters/iso_layout
-
-    # Mount all my zfs devices
-    zfs mount -a
-
-    # Mount and bind zfs device to specific dirs
-    mkdir -p /var/tmp/ccache > /dev/null 2>&1
-    mount -o bind /Data/Gentoo/portage/ /usr/portage/
-    mount -o bind /Data/Gentoo/distfiles/ /usr/portage/distfiles/
-    mount -o bind /Data/Gentoo/layman/ /var/lib/layman/
-    mount -o bind /Data/Gentoo/kernel/ /usr/src/
-    mount -o bind /Data/Gentoo/ccache/ /var/tmp/ccache/
 }
 
 stop() {
