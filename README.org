@@ -1,14 +1,7 @@
 
+* Macbook Pro Retina 2015 configs
 
-* Deprecated Note
-
-Since I switch to use =MacBook Pro Retina 2015=, this repo is not mantain anymore.
-
-The new repo for MBPR 2015 is [[https://github.com/coldnew/macbookpro-2015-config][here]].
-
-* Macbook Air 2013 configs
-
-This my config files or scripts for Gentoo Linux on Macbook Air 2013.
+This my config files or scripts for Gentoo Linux on Macbook Pro Retina 2015 13".
 
 Fell free to use it :)
 
