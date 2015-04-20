@@ -5,6 +5,8 @@ This my config files or scripts for Gentoo Linux on Macbook Pro Retina 2015 13".
 
 Fell free to use it :)
 
+Note: currently there's no any =macbook-overlay= for Gentoo Linux, I use my [[https://github.com/coldnew/coldnew-overlay][coldnew-overlay]] instead.
+
 * Systemd Script
 
 - my-stuff.service
