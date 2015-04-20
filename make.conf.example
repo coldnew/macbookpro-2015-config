@@ -1,0 +1,52 @@
+# These settings were set by the catalyst build script that automatically
+# built this stage.
+# Please consult /usr/share/portage/config/make.conf.example for a more
+# detailed example.
+CFLAGS="-O2 -pipe"
+CXXFLAGS="${CFLAGS}"
+
+# Generate by app-portage/cpuinfo2cpuflags 
+CPU_FLAGS_X86="aes avx avx2 fma3 mmx mmxext popcnt sse sse2 sse3 sse4_1 sse4_2 ssse3"
+
+# ACCEPT_KEYWORDS="~amd64"
+
+# WARNING: Changing your CHOST is not something that should be done lightly.
+# Please consult http://www.gentoo.org/doc/en/change-chost.xml before changing.
+CHOST="x86_64-pc-linux-gnu"
+MAKEOPTS="-j5"
+
+# These are the USE flags that were used in addition to what is provided by the
+# profile used for building.
+USE="${USE}"
+USE="${USE} xft cjk nls unicode"
+USE="${USE} emacs vim vim-syntax"
+USE="${USE} X xwayland wayland gles2 egl opengl"
+USE="${USE} systemd clang"
+USE="${USE} -qt4 qt5 qml gtk3"
+USE="${USE} avahi zeroconf -ffmpeg"
+USE="${USE} symlink"
+USE="${USE} vaapi v4l v4l2"
+USE="${USE} -handbook -bindist"
+
+
+PORTDIR="/usr/portage"
+DISTDIR="${PORTDIR}/distfiles"
+PKGDIR="${PORTDIR}/packages"
+
+FEATURES="${FEATURES}"
+FEATURES="${FEATURES} parallel-fetch userfetch fakeroot -noclean"
+FEATURES="${FEATURES} nodoc -ccache"
+
+INPUT_DEVICES="evdev keyboard mouse libinput"
+VIDEO_CARDS="fbdev intel i965"
+ALSA_CARDS="hda-intel"
+
+QEMU_USER_TARGETS="arm i386 x86_64"
+QEMU_SOFTMMU_TARGETS="arm i386 x86_64"
+
+GRUB_PLATFORMS="efi-64 pc"
+
+source /var/lib/layman/make.conf
+
+#PORTDIR_OVERLAY="/usr/local/portage ${PORTDIR_OVERLAY}"
+
