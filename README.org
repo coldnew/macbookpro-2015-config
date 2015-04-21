@@ -1,4 +1,29 @@
 
+* Underdevelopment
+
+Since MacBook Pro Retina 2015 =(Macbook Pro 12,1)= is a brand new device, some function may not work
+propely, I still try to make everything work under Gentoo Linux, the patch will
+be apply to [[https://github.com/coldnew/coldnew-overlay][coldnew-overlay]] since it's my own overlay.
+
+Why we don't has any overlay like macbook-overlay ?
+
+Following are some function I want to work but cant use right now, if marked
+with =X=, which means it's work.
+
+- [ ] wifi
+
+  since like broadcom-sta leak of firmware ?
+
+  http://ubuntuforums.org/showthread.php?t=2270831
+
+- [X] keyboard fn keys
+
+  apply following patch: https://gist.github.com/tmacedo/016a3d0fae9e3d87a1dd
+
+- [ ] wayland
+
+  No... has anyone success on it ?
+
 * Macbook Pro Retina 2015 configs
 
 This my config files or scripts for Gentoo Linux on Macbook Pro Retina 2015 13".
