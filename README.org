@@ -23,6 +23,8 @@ with =X=, which means it's work.
   [   12.447551] [wl_cfg80211_detach()] in ndev=ffff88045bb34000: IEEE80211ptr=          (null)
   #+END_EXAMPLE
 
+  seems like I need to install =sys-kernel/linux-firmware= for the =/lib/firmware/brcm/brcmfmac43602-pcie.bin=
+
 - [X] keyboard fn keys
 
   apply following patch: https://gist.github.com/tmacedo/016a3d0fae9e3d87a1dd
