@@ -25,6 +25,9 @@ with =X=, which means it's work.
 
   seems like I need to install =sys-kernel/linux-firmware= for the =/lib/firmware/brcm/brcmfmac43602-pcie.bin=
 
+  The official =broadcom-sta-6.30.223.248-r3= driver seams like not support =BCM43602= which used in MBPR 12,1,
+  we should use a kernel provide driver =brcsmac=.
+
 - [X] keyboard fn keys
 
   apply following patch: https://gist.github.com/tmacedo/016a3d0fae9e3d87a1dd
