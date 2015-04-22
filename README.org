@@ -12,18 +12,12 @@ with =X=, which means it's work.
 
 - [X] wifi
 
-  since like broadcom-sta leak of firmware ?
-
-  http://ubuntuforums.org/showthread.php?t=2270831
-
-  I have following error when launch wl.ko
+  I have following error when launch wl.ko (broadcom-sta)
 
   #+BEGIN_EXAMPLE
   [   12.446547] wl driver 6.30.223.248 (r487574) failed with code 1
   [   12.447551] [wl_cfg80211_detach()] in ndev=ffff88045bb34000: IEEE80211ptr=          (null)
   #+END_EXAMPLE
-
-  seems like I need to install =sys-kernel/linux-firmware= for the =/lib/firmware/brcm/brcmfmac43602-pcie.bin=
 
   The official =broadcom-sta-6.30.223.248-r3= driver seams like not support =BCM43602= which used in MBPR 12,1,
   we should use a kernel provide driver =brcfmac=.
