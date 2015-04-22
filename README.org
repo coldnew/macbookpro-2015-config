@@ -28,6 +28,10 @@ with =X=, which means it's work.
 
   : brcm/brcmfmac43602-pcie.bin
 
+  Add the savedconfig file and enable =savedconfig= USE to emerge linux-firmware
+
+  : USE="savedconfig" emerge sys-kernel/linux-firmware
+
 - [X] keyboard fn keys
 
   apply following patch: https://gist.github.com/tmacedo/016a3d0fae9e3d87a1dd
