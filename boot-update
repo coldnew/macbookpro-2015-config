@@ -37,7 +37,7 @@ GRUB_CFG=/boot/grub/grub.cfg
 # Before we start, check the /boot/efi structure is ok for macbook firmware to
 # boot.
 #
-if [ ! -d ${BOOT} ]; then
+if [ ! -d ${BOOT}/System/Library/CoreServices ]; then
     echo "ERROR: $BOOT structure is valid"
     exit -1
 fi
