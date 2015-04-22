@@ -44,6 +44,10 @@ with =X=, which means it's work.
 
   Forcetouch trackpad can do BTN_TOUCH, but two finger scrolling has problem.
 
+- [ ] suspend
+
+  Untest yet, I more prefer =suspend to RAM= instead of =hibernate to SSD=
+
 * Macbook Pro Retina 2015 configs
 
 This my config files or scripts for Gentoo Linux on Macbook Pro Retina 2015 13".
