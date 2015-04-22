@@ -1,12 +1,36 @@
 #!/bin/sh
 
 # update grub for dual boot osx
+# We mount this device at /boot/efi, the directory structure like following
+#
+# .
+# ├── mach_kernel
+# └── System
+#     └── Library
+#         └── CoreServices
+#             ├── boot.efi
+#             └── SystemVersion.plist
+#
+# 4 directories, 2 files
+#
+
+# Variables
+BOOT=/boot/efi
+BOOT_EFI=${BOOT}/System/Library/CoreServices/boot.efi
+GRUB_CFG=/boot/grub/grub.cfg
+
+# Before we start, check the /boot/efi structure is ok for macbook firmware to
+# boot.
+#
+if [ ! -d ${BOOT} ]; then
+    echo "ERROR: $BOOT structure is valid"
+    exit -1
+fi
 
 # TODO: Add more secure check
-
 grub2-mkconfig -o /boot/grub/grub.cfg
 
 grub2-mkstandalone \
     -d /usr/lib/grub/x86_64-efi \
     -O x86_64-efi \
-    -o /boot/efi/System/Library/CoreServices/boot.efi /boot/grub/grub.cfg
+    -o ${BOOT_EFI} ${GRUB_CFG}
