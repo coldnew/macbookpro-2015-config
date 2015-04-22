@@ -2,13 +2,16 @@
 * Underdevelopment
 
 Since MacBook Pro Retina 2015 =(Macbook Pro 12,1)= is a brand new device, some function may not work
-propely, I still try to make everything work under Gentoo Linux, the patch will
+propely, I still try to make everything work under =Gentoo Linux=, the patch will
 be apply to [[https://github.com/coldnew/coldnew-overlay][coldnew-overlay]] since it's my own overlay.
 
 Why we don't has any overlay like macbook-overlay ?
 
 Following are some function I want to work but cant use right now, if marked
 with =X=, which means it's work.
+
+The kernel I use is =Linux 4.0.0= in =sys-kernel/gentoo-sources=, I also test on
+=sys-kerne/git-sources= without Gentoo's patchsets, so anyone can test on theis favorit Linux distro.
 
 - [X] wifi
 
