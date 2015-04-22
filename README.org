@@ -10,7 +10,7 @@ Why we don't has any overlay like macbook-overlay ?
 Following are some function I want to work but cant use right now, if marked
 with =X=, which means it's work.
 
-- [ ] wifi
+- [X] wifi
 
   since like broadcom-sta leak of firmware ?
 
@@ -26,7 +26,13 @@ with =X=, which means it's work.
   seems like I need to install =sys-kernel/linux-firmware= for the =/lib/firmware/brcm/brcmfmac43602-pcie.bin=
 
   The official =broadcom-sta-6.30.223.248-r3= driver seams like not support =BCM43602= which used in MBPR 12,1,
-  we should use a kernel provide driver =brcsmac=.
+  we should use a kernel provide driver =brcfmac=.
+
+  Use =brcmfmac= driver shipped with linux kernel can let wifi work, you also need to install =sys-kernel/linux-firmware= for =/lib/firmware/brcm/brcmfmac43602-pcie.bin=.
+
+  I use =/etc/portage/savedconfig/sys-kernel/linux-firmware= to control which firmware I need to install, and the firmware we need to make wifi work is
+
+  : brcm/brcmfmac43602-pcie.bin
 
 - [X] keyboard fn keys
 
