@@ -109,9 +109,10 @@ The kernel I use is =Linux 4.0.0= in =sys-kernel/gentoo-sources=, I also test on
   Use some code to fetch kernel event, I only get =BTN_LEFT= event, and the kernel think trackpad as mouse device.
 
 
-- [ ] suspend
+- [X] suspend
 
-  Untest yet, I more prefer =suspend to RAM= instead of =hibernate to SSD=
+  Seems like work, I use =suspend to RAM= method
+
 
 - [X] SD Card Reader
 
