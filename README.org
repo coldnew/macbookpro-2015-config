@@ -43,6 +43,54 @@ The kernel I use is =Linux 4.0.0= in =sys-kernel/gentoo-sources=, I also test on
 
   No... has anyone success on it ?
 
+  some error info about kernel
+
+  #+BEGIN_EXAMPLE
+    [   29.645464] CPU: 0 PID: 6151 Comm: Xorg Tainted: G           O    4.0.0-gentoo #1
+    [   29.645465] Hardware name: Apple Inc. MacBookPro12,1/Mac-E43C1C25D4880AD6, BIOS MBP121.88Z.0167.B02.1503241251 03/24/2015
+    [   29.645467]  0000000000000009 ffff880432837748 ffffffff818d33eb 0000000000003a3a
+    [   29.645468]  ffff880432837798 ffff880432837788 ffffffff810756d1 0000000000000000
+    [   29.645469]  ffffffff815c89ba 0000000000000000 ffff880457b26000 ffff8800373a9800
+    [   29.645469] Call Trace:
+    [   29.645473]  [<ffffffff818d33eb>] dump_stack+0x45/0x57
+    [   29.645475]  [<ffffffff810756d1>] warn_slowpath_common+0x9c/0xb6
+    [   29.645477]  [<ffffffff815c89ba>] ? assert_plane.constprop.46+0x66/0x88
+    [   29.645479]  [<ffffffff8107572c>] warn_slowpath_fmt+0x41/0x43
+    [   29.645481]  [<ffffffff815c89ba>] assert_plane.constprop.46+0x66/0x88
+    [   29.645482]  [<ffffffff815ce59e>] hsw_disable_ips+0x37/0x162
+    [   29.645484]  [<ffffffff815ce8d1>] intel_crtc_disable_planes+0x47/0xed
+    [   29.645486]  [<ffffffff815cf45e>] haswell_crtc_disable+0x3b/0x30f
+    [   29.645488]  [<ffffffff815cfc02>] __intel_set_mode+0x381/0x858
+    [   29.645489]  [<ffffffff815d5bd1>] intel_crtc_set_config+0x880/0xb99
+    [   29.645492]  [<ffffffff81558e30>] ? drm_atomic_helper_plane_set_property+0x67/0xa6
+    [   29.645495]  [<ffffffff81568d4c>] drm_mode_set_config_internal+0x54/0xe0
+    [   29.645496]  [<ffffffff8155a849>] restore_fbdev_mode+0xb6/0xd0
+    [   29.645498]  [<ffffffff8155c0fe>] drm_fb_helper_restore_fbdev_mode_unlocked+0x22/0x59
+    [   29.645500]  [<ffffffff8155c166>] drm_fb_helper_set_par+0x31/0x35
+    [   29.645502]  [<ffffffff815e245b>] intel_fbdev_set_par+0x15/0x58
+    [   29.645504]  [<ffffffff811315af>] ? unmap_single_vma+0x283/0x61d
+    [   29.645506]  [<ffffffff8150b97a>] fb_set_var+0x293/0x389
+    [   29.645508]  [<ffffffff81144a80>] ? __mmu_notifier_invalidate_range+0x66/0x72
+    [   29.645510]  [<ffffffff8118d77a>] ? lookup_mnt+0x45/0x55
+    [   29.645512]  [<ffffffff81508557>] fbcon_blank+0x7e/0x246
+    [   29.645514]  [<ffffffff814a703a>] ? __sg_page_iter_next+0x45/0x65
+    [   29.645516]  [<ffffffff814ea185>] do_unblank_screen+0xf5/0x16e
+    [   29.645518]  [<ffffffff814e2326>] vt_ioctl+0x51a/0xfee
+    [   29.645520]  [<ffffffff810b7135>] ? call_rcu_sched+0x12/0x14
+    [   29.645522]  [<ffffffff81121ce6>] ? shmem_destroy_inode+0x17/0x19
+    [   29.645524]  [<ffffffff814d874a>] tty_ioctl+0xa39/0xac0
+    [   29.645526]  [<ffffffff811480f8>] ? kfree+0xe2/0x116
+    [   29.645527]  [<ffffffff8118661f>] ? dput+0x28/0x1b5
+    [   29.645529]  [<ffffffff8118d309>] ? mntput+0x28/0x2a
+    [   29.645531]  [<ffffffff8118353e>] do_vfs_ioctl+0x367/0x421
+    [   29.645533]  [<ffffffff81175972>] ? ____fput+0x9/0xb
+    [   29.645535]  [<ffffffff8108b958>] ? task_work_run+0x91/0xa3
+    [   29.645537]  [<ffffffff81183631>] SyS_ioctl+0x39/0x61
+    [   29.645539]  [<ffffffff818db50d>] system_call_fastpath+0x16/0x1b
+    [   29.645540] ---[ end trace c8e490f81e54512e ]---
+    [   31.336397] [drm:intel_cpu_fifo_underrun_irq_handler] *ERROR* CPU pipe A FIFO underrun
+  #+END_EXAMPLE
+
 - [ ] trackpad
 
   Forcetouch trackpad can do BTN_TOUCH, but two finger scrolling has problem.
