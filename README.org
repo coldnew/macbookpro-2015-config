@@ -135,3 +135,16 @@ Note: currently there's no any =macbook-overlay= for Gentoo Linux, I use my [[ht
 - boot-update
 
   A simple update grub script for dual boot on Macbook Air
+
+* QA
+
+** Users with id (501) not show in GDM ?
+
+   To make compatible with my Mac, I change Linux user to =uid:gid 501:20=, and find there's no user list in GDM,
+   this may due to =/etc/login.defs= has value like
+
+   : UID_MIN                  1000
+
+   change it to following and uer will showup (maybe ?)
+
+   : UID_MIN                   500
