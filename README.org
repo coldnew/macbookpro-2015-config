@@ -91,6 +91,17 @@ The kernel I use is =Linux 4.0.0= in =sys-kernel/gentoo-sources=, I also test on
     [   31.336397] [drm:intel_cpu_fifo_underrun_irq_handler] *ERROR* CPU pipe A FIFO underrun
   #+END_EXAMPLE
 
+- [X] xwayland
+
+  Yes, my Gnome 3.16 is running on Xwayland.
+
+  #+BEGIN_EXAMPLE
+    coldnew@fevia ~ $ ps aux | grep Xwa
+    gdm       6104  0.0  0.1 218196 31556 tty7     Sl+  17:12   0:00 /usr/bin/Xwayland :1024 -rootless -noreset -listen 4 -listen 5 -displayfd 6
+    coldnew   6244  2.2  0.4 389688 79532 tty2     Sl+  17:12   2:01 /usr/bin/Xwayland :0 -rootless -noreset -listen 4 -listen 5 -displayfd 6
+  #+END_EXAMPLE
+
+
 - [ ] trackpad
 
   Forcetouch trackpad can do BTN_TOUCH, but two finger scrolling has problem.
