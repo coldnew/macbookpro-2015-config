@@ -154,7 +154,10 @@ Note: currently there's no any =macbook-overlay= for Gentoo Linux, I use my [[ht
 
 * QA
 
-** Users with id (501) not show in GDM ?
+** TODO Users with id (501) not show in GDM ?
+
+   NOTE: I think I am wrong, cant' make this work yet.
+
 
    To make compatible with my Mac, I change Linux user to =uid:gid 501:20=, and find there's no user list in GDM,
    this may due to =/etc/login.defs= has value like
