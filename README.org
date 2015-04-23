@@ -102,6 +102,10 @@ The kernel I use is =Linux 4.0.0= in =sys-kernel/gentoo-sources=, I also test on
 
   Untest yet, I more prefer =suspend to RAM= instead of =hibernate to SSD=
 
+- [ ] SD Card Reader
+
+  no work yet.
+
 * Macbook Pro Retina 2015 configs
 
 This my config files or scripts for Gentoo Linux on Macbook Pro Retina 2015 13".
