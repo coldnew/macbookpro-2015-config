@@ -120,7 +120,6 @@ The kernel I use is =Linux 4.0.0= in =sys-kernel/gentoo-sources=, I also test on
 
   Can work, but I don't know which kernel config to make it work :(
 
-
 * Macbook Pro Retina 2015 configs
 
 This my config files or scripts for Gentoo Linux on Macbook Pro Retina 2015 13".
@@ -128,32 +127,6 @@ This my config files or scripts for Gentoo Linux on Macbook Pro Retina 2015 13".
 Fell free to use it :)
 
 Note: currently there's no any =macbook-overlay= for Gentoo Linux, I use my [[https://github.com/coldnew/coldnew-overlay][coldnew-overlay]] instead.
-
-* Systemd Script
-
-- my-stuff.service
-
-  This service start something I want to start when system start.
-
-* Other files info
-
-- local-service
-
-  This file will install to =/usr/share/macbookair-2013/= , which is
-  used for =my-stuff.service= systemd script.
-
-- kernel-config.example
-
-  My kernel-config for Macbook Air 2013, note that this config just
-  install to =/usr/share/macbookair-2013/=.
-
-- fstab.example
-
-  My /etc/fstab
-
-- boot-update
-
-  A simple update grub script for dual boot on Macbook Air
 
 * QA
 
