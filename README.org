@@ -170,3 +170,8 @@ Note: currently there's no any =macbook-overlay= for Gentoo Linux, I use my [[ht
    change it to following and uer will showup (maybe ?)
 
    : UID_MIN                   500
+
+** TODO Why I can't connect with =ssh=
+
+   I don't konw, I still trying to figure out problems, but I this it's
+   =brcmfmac= drivers bug, since I can connect to github with ssh if I use my cellphone as ethernet bridge.
