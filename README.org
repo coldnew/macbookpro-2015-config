@@ -148,3 +148,6 @@ Note: currently there's no any =macbook-overlay= for Gentoo Linux, I use my [[ht
 
    I don't konw, I still trying to figure out problems, but I this it's
    =brcmfmac= drivers bug, since I can connect to github with ssh if I use my cellphone as ethernet bridge.
+
+   NOTE: I can use =brcmfmac= driver to use with ssh in my company's router,
+   maybe it's some problem conflict with router?
