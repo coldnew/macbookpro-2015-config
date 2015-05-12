@@ -10,8 +10,11 @@ Why we don't has any overlay like macbook-overlay ?
 Following are some function I want to work but cant use right now, if marked
 with =X=, which means it's work.
 
-The kernel I use is =Linux 4.0.0= in =sys-kernel/gentoo-sources=, I also test on
-=sys-kerne/git-sources= without Gentoo's patchsets, so anyone can test on theis favorit Linux distro.
+The kernel I use is [[https://github.com/coldnew/coldnew-kernel][coldnew-kernel]], which tracked with linux-git and apply zfs
+patches and some patch may make macbook work more nicely. You can find my config
+in =examples/kernel-config= folder.
+
+Currently I'm test on kernel =p4.1= branch, which is based on Linux Kernel 4.1.0-rc3.
 
 - [X] wifi
 
