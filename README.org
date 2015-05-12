@@ -152,7 +152,7 @@ Note: currently there's no any =macbook-overlay= for Gentoo Linux, I use my [[ht
    NOTE: I can use =brcmfmac= driver to use with ssh in my company's router,
    maybe it's some problem conflict with router?
 
-** Boot hang on "switch to clocksource tsc"
+** Boot hang on "switch to clocksource tsc" [FIXED in 4.1-rc3]
 
 If you has problem to boot system properly and encounter error such as
 
