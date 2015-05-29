@@ -105,7 +105,7 @@ Currently I'm test on kernel =p4.1= branch, which is based on Linux Kernel 4.1.0
   #+END_EXAMPLE
 
 
-- [ ] trackpad
+- [X] trackpad
 
   Forcetouch trackpad can do BTN_TOUCH, but two finger scrolling has problem.
 
@@ -113,6 +113,9 @@ Currently I'm test on kernel =p4.1= branch, which is based on Linux Kernel 4.1.0
 
   Linux kernel bugzilla: https://bugzilla.kernel.org/show_bug.cgi?id=96771
 
+  You need to apply patches in bugzilla to make this work!!
+
+  test on linux kernel 4.1-rc5
 
 - [X] suspend
 
