@@ -1,11 +1,11 @@
 [Unit]
-Description=My Local Initial Service
+Description=MacbookPro 2015 Initial Service
 
 [Service]
 Type=oneshot
 RemainAfterExit=no
-ExecStart=/usr/share/macbookpro-2015/local-service start
-ExecStart=/usr/share/macbookpro-2015/local-service stop
+ExecStart=/usr/share/macbookpro-2015/mbpr2015-service start
+ExecStart=/usr/share/macbookpro-2015/mbpr2015-service stop
 
 [Install]
 WantedBy=multi-user.target
