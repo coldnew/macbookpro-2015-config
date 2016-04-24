@@ -126,9 +126,9 @@ Currently I'm test on kernel =p4.1= branch, which is based on Linux Kernel 4.1.0
 
   Can work, but I don't know which kernel config to make it work :(
 
-- [ ] bluetooth
+- [X] bluetooth
 
-  Not sure yet!!
+  TODO: find related config files (current in my kernel setting)
 
 * Macbook Pro Retina 2015 configs
 
