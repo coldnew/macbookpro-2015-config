@@ -130,6 +130,9 @@ Currently I'm test on kernel =p4.1= branch, which is based on Linux Kernel 4.1.0
 
   TODO: find related config files (current in my kernel setting)
 
+* Screenshot
+[[https://raw.githubusercontent.com/coldnew/macbookpro-2015-config/master/assets/screenshot.jpg]]
+
 * Macbook Pro Retina 2015 configs
 
 This my config files or scripts for Gentoo Linux on Macbook Pro Retina 2015 13".
