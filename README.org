@@ -122,10 +122,24 @@ Currently I'm test on kernel =p4.1= branch, which is based on Linux Kernel 4.1.0
   Seems like work, I use =suspend to RAM= method
 
 
-- [X] SD Card Reader
+- [ **?** ] SD Card Reader
 
-  Can work, but I don't know which kernel config to make it work :(
-
+  I rembered when I first test linux on Macbook, it was worked. It can't be detect now in latest kernel (why?)
+  
+  Here's my lsusb info:
+  
+#+BEGIN_EXAMPLE
+  Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 
+  Bus 001 Device 003: ID 05ac:0273 Apple, Inc. 
+  Bus 001 Device 002: ID 05ac:8290 Apple, Inc. 
+  Bus 001 Device 001: ID 1d6b:0002 Linux Foundation
+#+END_EXAMPLE
+  
+  Some related issue:
+  https://bugzilla.redhat.com/show_bug.cgi?id=1290959
+  https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1531653
+  
+  
 - [X] bluetooth
 
   TODO: find related config files (current in my kernel setting)
