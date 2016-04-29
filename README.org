@@ -138,7 +138,7 @@ Currently I'm test on kernel =p4.1= branch, which is based on Linux Kernel 4.1.0
   Some related issue:
   https://bugzilla.redhat.com/show_bug.cgi?id=1290959
   https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1531653
-  
+  https://www.reddit.com/r/linuxmint/comments/3ydoxs/unable_to_detect_builtin_sd_card_reader/
   
 - [X] bluetooth
 
