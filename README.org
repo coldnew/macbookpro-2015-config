@@ -62,7 +62,7 @@ Here the SD Card device is missing, but I think it's device ID should be =05ac:8
 
 *** Related Bugs report
 
-- https://bugzilla.redhat.com/show_bug.cgi?id=1290959
+- https://bugzilla.redhat.com/show_bug.cgi?id=1315063
 
 - https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1531653
 
