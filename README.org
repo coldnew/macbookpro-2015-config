@@ -26,7 +26,6 @@ Add the savedconfig file and enable =savedconfig= USE to emerge linux-firmware
 
 : USE="savedconfig" emerge sys-kernel/linux-firmware
 
-
 ** TouchPad
 
 Works great! two finger scrolling and left/right button can work.
@@ -43,22 +42,19 @@ Seems like work, I use =suspend to RAM= method
 
 ** SD Card Reader
 
-I rembered when I first test linux on Macbook, it was worked. It can't be detect now in latest kernel (why?)
+   SD card reader has been not work for a long time, after I upgrade to =macOS Sierra= version =10.12.6= , it works now :P.
 
-Here's my lsusb info:
+   You should has following =lsusb= info:
 
-#+BEGIN_EXAMPLE
-  Bus 002 Device 001: ID 1d6b:0003 Linux Foundation
-  Bus 001 Device 003: ID 05ac:0273 Apple, Inc.
-  Bus 001 Device 002: ID 05ac:8290 Apple, Inc.
-  Bus 001 Device 001: ID 1d6b:0002 Linux Foundation
-#+END_EXAMPLE
+   #+BEGIN_EXAMPLE
+     Bus 002 Device 002: ID 05ac:8406 Apple, Inc.
+     Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+     Bus 001 Device 003: ID 05ac:0273 Apple, Inc. Internal Keyboard/Trackpad (ISO)
+     Bus 001 Device 002: ID 05ac:8290 Apple, Inc. Bluetooth Host Controller
+     Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+   #+END_EXAMPLE
 
-Here the SD Card device is missing, but I think it's device ID should be =05ac:8406=.
-
-#+BEGIN_EXAMPLE
-  USB Device ID: 05ac:8406
-#+END_EXAMPLE
+   The device =05ac:8406= is the sdcard reader, make sure it exists or not.
 
 *** Related Bugs report
 
