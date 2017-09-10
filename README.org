@@ -97,7 +97,7 @@ menuentry "Mac OSX" {
 }
 #+end_src
 
-The use these command to rebuild grub menu.
+Then use these command to rebuild grub menu.
 
 : grub-mkconfig -o /boot/grub/grub.cfg
 
