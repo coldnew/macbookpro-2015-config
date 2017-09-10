@@ -85,13 +85,22 @@ TODO: find related config files (current in my kernel setting)
 
    : UID_MIN                   500
 
-** TODO Why I can't connect with =ssh=
+** How to add "Mac OSX" to grub menu
 
-   I don't konw, I still trying to figure out problems, but I this it's
-   =brcmfmac= drivers bug, since I can connect to github with ssh if I use my cellphone as ethernet bridge.
+Just add following entry to =/etc/grub.d/40_custom=
 
-   NOTE: I can use =brcmfmac= driver to use with ssh in my company's router,
-   maybe it's some problem conflict with router?
+#+begin_src sh
+menuentry "Mac OSX" {
+    insmod hfsplus
+    search --set=root --file /System/Library/CoreServices/boot.efi
+    chainloader /System/Library/CoreServices/boot.efi
+}
+#+end_src
+
+The use these command to rebuild grub menu.
+
+: grub-mkconfig -o /boot/grub/grub.cfg
+
 
 ** Boot hang on "switch to clocksource tsc" [FIXED in 4.1-rc3]
 
