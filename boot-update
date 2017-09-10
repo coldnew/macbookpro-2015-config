@@ -43,9 +43,9 @@ if [ ! -d ${BOOT}/System/Library/CoreServices ]; then
 fi
 
 # TODO: Add more secure check
-grub2-mkconfig -o /boot/grub/grub.cfg
+grub-mkconfig -o /boot/grub/grub.cfg
 
-grub2-mkstandalone \
+grub-mkstandalone \
     -d /usr/lib/grub/x86_64-efi \
     -O x86_64-efi \
     -o ${BOOT_EFI} ${GRUB_CFG}
