@@ -1,28 +1,28 @@
 * Macbook Pro Retina 2015 configs
 
-This my config files or scripts for Gentoo Linux on Macbook Pro Retina 2015 13".
+These are my config files and scripts for Gentoo Linux on Macbook Pro Retina 2015 13".
 
-Fell free to use it :)
+Fell free to use them :)
 
 You may also interested in my [[https://github.com/coldnew/coldnew-overlay/blob/master/app-laptop/macbookpro2015/macbookpro2015-9999.ebuild][macbookpro2015-9999.ebuild]].
 
 [[https://raw.githubusercontent.com/coldnew/macbookpro-2015-config/master/assets/screenshot.jpg]]
 
-* Which device can work ?
+* Which devices work ?
 
 So...you want to install Gentoo Linux on MacBook Pro 2015 ? Here's what I got:
 
 ** Wifi
 
-The official =broadcom-sta-6.30.223.248-r3= driver seams like not support =BCM43602= which used in MBPR 12,1, we should use a kernel provide driver =brcfmac=.
+The official =broadcom-sta-6.30.223.248-r3= driver doesnt seem to like =BCM43602= which is used in MBPR 12,1, so we should use a kernel provided driver =brcfmac=.
 
-Use =brcmfmac= driver shipped with linux kernel can let wifi work, you also need to install =sys-kernel/linux-firmware= for =/lib/firmware/brcm/brcmfmac43602-pcie.bin=.
+Use the =brcmfmac= driver shipped with the linux kernel to enable wifi, you also need to install =sys-kernel/linux-firmware= for =/lib/firmware/brcm/brcmfmac43602-pcie.bin=.
 
 I use =/etc/portage/savedconfig/sys-kernel/linux-firmware= to control which firmware I need to install, and the firmware we need to make wifi work is
 
 : brcm/brcmfmac43602-pcie.bin
 
-Add the savedconfig file and enable =savedconfig= USE to emerge linux-firmware
+Add the savedconfig file, and enable =savedconfig= USE to emerge linux-firmware
 
 : USE="savedconfig" emerge sys-kernel/linux-firmware
 
@@ -38,13 +38,13 @@ Here's related patches for touch pad.
 
 ** Suspend
 
-Seems like work, I use =suspend to RAM= method
+Appears to work, I use the =suspend to RAM= method
 
 ** SD Card Reader
 
-   SD card reader has been not work for a long time, after I upgrade to =macOS Sierra= version =10.12.6= , it works now :P.
+   SD card reader has been not worked for a long time, after I upgraded to =macOS Sierra= version =10.12.6= , it works now :P.
 
-   You should has following =lsusb= info:
+   You should have the following =lsusb= info:
 
    #+BEGIN_EXAMPLE
      Bus 002 Device 002: ID 05ac:8406 Apple, Inc.
@@ -56,7 +56,7 @@ Seems like work, I use =suspend to RAM= method
 
    The device =05ac:8406= is the sdcard reader, make sure it exists or not.
 
-*** Related Bugs report
+*** Related Bug reports
 
 - https://bugzilla.redhat.com/show_bug.cgi?id=1315063
 
@@ -71,23 +71,23 @@ TODO: find related config files (current in my kernel setting)
 
 * QA
 
-** TODO Users with id (501) not show in GDM ?
+** TODO Users with id (501) not shown in GDM ?
 
    NOTE: I think I am wrong, cant' make this work yet.
 
 
-   To make compatible with my Mac, I change Linux user to =uid:gid 501:20=, and find there's no user list in GDM,
-   this may due to =/etc/login.defs= has value like
+   To make compatible with my Mac, I changed the Linux user to =uid:gid 501:20=, and found there's no user listed in GDM,
+   this may be due to =/etc/login.defs= having values like
 
    : UID_MIN                  1000
 
-   change it to following and uer will showup (maybe ?)
+   change it to following, and the user will show up (maybe ?)
 
    : UID_MIN                   500
 
 ** How to add "Mac OSX" to grub menu
 
-Just add following entry to =/etc/grub.d/40_custom=
+Just add the following entry to =/etc/grub.d/40_custom=
 
 #+begin_src sh
 menuentry "Mac OSX" {
@@ -97,14 +97,14 @@ menuentry "Mac OSX" {
 }
 #+end_src
 
-Then use these command to rebuild grub menu.
+Then use these commands to rebuild grub menu.
 
 : grub-mkconfig -o /boot/grub/grub.cfg
 
 
 ** Boot hang on "switch to clocksource tsc" [FIXED in 4.1-rc3]
 
-If you has problem to boot system properly and encounter error such as
+If you have a problem booting the system properly and encounter an error such as
 
 : switch to clocksource tsc
 
